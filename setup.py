@@ -1,7 +1,8 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 from Cython.Build import cythonize
 
 setup(
-    ext_modules = cythonize("kivyapp1.pyx")
+    ext_modules = cythonize("kivyapp1.pyx"),
+    packages=setuptools.find_packages()
 )
 
